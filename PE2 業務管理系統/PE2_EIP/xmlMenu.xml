@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ctsets>
+  <t_menu_info frm_id="1" frm_cname="資產管理" frm_father_id="-1" frm_order="1.0000" frm_power="1"  />
+  <t_menu_info frm_id="3" frm_cname="資產管理列表" frm_Path="PE2_EIP.frmAssitList" frm_father_id="1" frm_remark="f2" frm_order="3.0000" frm_power="2"  />
+  <t_menu_info frm_id="6" frm_cname="群組綁定" frm_Path="PE2_EIP.frmAssetChangeGroup" frm_father_id="1" frm_remark="f3" frm_order="7.0000" frm_power="8" />
+  <t_menu_info frm_id="7" frm_cname="站體功能異動" frm_Path="PE2_EIP.frmAssitEdit" frm_father_id="1" frm_remark="f4" frm_order="8.0000" frm_power="16" />
+  <!--<t_menu_info frm_id="7" frm_cname="EXCEL資料匯出" frm_Path="PE2_EIP.frmAssitEdit" frm_father_id="1" frm_remark="f4" frm_order="8.0000" frm_power="16" />-->
+  <!--<t_menu_info frm_id="4" frm_cname="資產盤點" frm_Path="frmUI.Form2" frm_father_id="1" frm_remark="f2" frm_order="3.0000" />-->
+  
+  <!--<t_menu_info frm_id="5" frm_cname="資產群組" frm_father_id="-1" frm_order="10.0000" frm_power="4" />
+  <t_menu_info frm_id="6" frm_cname="群組綁定" frm_Path="PE2_EIP.frmAssetChangeGroup" frm_father_id="5" frm_remark="f3" frm_order="7.0000" frm_power="8" />
+  <t_menu_info frm_id="7" frm_cname="站體功能異動" frm_Path="PE2_EIP.frmAssitEdit" frm_father_id="5" frm_remark="f4" frm_order="8.0000" frm_power="16" />-->
+
+  <t_menu_info frm_id="8" frm_cname="資產查詢" frm_father_id="-1" frm_order="10.0000" frm_power="32"  />
+  <t_menu_info frm_id="9" frm_cname="資產總表查詢" frm_Path="PE2_EIP.frmAssitList" frm_father_id="8" frm_remark="f3" frm_order="7.0000" frm_power="64" />
+  <t_menu_info frm_id="11" frm_cname="資產分布統計" frm_Path="PE2_EIP.frmAssetReport" frm_father_id="8" frm_remark="f4" frm_order="8.0000" frm_power="128" />
+  <t_menu_info frm_id="12" frm_cname="站體資產統計" frm_Path="PE2_EIP.frmAssetStation" frm_father_id="8" frm_remark="f4" frm_order="8.0000" frm_power="256" />
+
+  <t_menu_info frm_id="16" frm_cname="治具管理" frm_father_id="-1" frm_order="10.0000" frm_power="512" />
+  <t_menu_info frm_id="17" frm_cname="治具管理列表" frm_Path="PE2_EIP.frmTool" frm_father_id="16" frm_remark="f3" frm_order="7.0000" frm_power="1024" />
+  <t_menu_info frm_id="18" frm_cname="治具出借" frm_Path="frmUI.Form3" frm_father_id="16" frm_remark="f3" frm_order="7.0000" frm_power="1024" />
+  <t_menu_info frm_id="19" frm_cname="治具歸還" frm_Path="frmUI.Form3" frm_father_id="16" frm_remark="f3" frm_order="7.0000" frm_power="1024" />
+  
+  <t_menu_info frm_id="13" frm_cname="基本管理" frm_father_id="-1" frm_order="10.0000" frm_power="512" />
+  <t_menu_info frm_id="14" frm_cname="樓層線別管理" frm_Path="frmUI.Form3" frm_father_id="13" frm_remark="f3" frm_order="7.0000" frm_power="1024" />
+</ctsets>

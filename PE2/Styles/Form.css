@@ -1,0 +1,55 @@
+﻿
+body
+{
+    font-family: "Lucida Grande" , "Lucida Sans Unicode" , Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.registration_form
+{
+    margin: 0 auto;
+    width: 100%;
+    padding: 14px;
+}
+label
+{
+    width: 8em;
+    float: left;
+    margin-right: 0.5em;
+    display: block;
+}
+
+.submit
+{
+    float: right;
+}
+p
+{
+    border-bottom: 1px solid #B7DDF2;
+    color: #666666;
+    font-size: 11px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+fieldset
+{
+    background: #EBF4FB none repeat scroll 0 0;
+    border: 2px solid #B7DDF2;
+    width: 95%;
+}
+
+legend
+{
+    color: #fff;
+    background: #80D3E2;
+    border: 1px solid #781351;
+    padding: 2px 6px;
+}
+
+.elements
+{
+    padding: 10px;
+}
+.QuantityCount
+{
+    width: 50px;
+}

@@ -1,0 +1,1185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{690C8607-00C6-470D-B46F-4ACB0482B720}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PE2</RootNamespace>
+    <AssemblyName>PE2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Assets\AssetsDataImport.aspx" />
+    <Content Include="Assets\AssetsDownload.aspx" />
+    <Content Include="Assets\AssetsEdit.aspx" />
+    <Content Include="Assets\AssetsGroupAdd.aspx" />
+    <Content Include="Assets\AssetsGroupChange.aspx" />
+    <Content Include="Assets\AssetsList.aspx" />
+    <Content Include="Assets\AssetsSearch.aspx" />
+    <Content Include="Assets\AssetsUpload.aspx" />
+    <Content Include="Assets\CalibrateLimit.aspx" />
+    <Content Include="Assets\CalibrateList.aspx" />
+    <Content Include="Assets\CalibrateSearch.aspx" />
+    <Content Include="Assets\CalibrateEdit.aspx" />
+    <Content Include="Assets\CalibrateReturn.aspx" />
+    <Content Include="Assets\CalibrateTo.aspx" />
+    <Content Include="Assets\ShieldingBoxCp.aspx" />
+    <Content Include="Assets\ShieldingBoxEdit.aspx" />
+    <Content Include="Assets\ShieldingBoxLimit.aspx" />
+    <Content Include="Assets\ShieldingBoxList.aspx" />
+    <Content Include="Assets\ShieldingBoxSearch.aspx" />
+    <Content Include="Expendables\EditExpendables.aspx" />
+    <Content Include="Expendables\ExpendablesList.aspx" />
+    <Content Include="Expendables\GetExpendables.aspx" />
+    <Content Include="Expendables\GetExpendablesList.aspx" />
+    <Content Include="Fixture\FixtureEdit.aspx" />
+    <Content Include="Fixture\FixtureIn.aspx" />
+    <Content Include="Fixture\FixtureLimit.aspx" />
+    <Content Include="Fixture\FixtureOutLimit.aspx" />
+    <Content Include="Fixture\FixtureList.aspx" />
+    <Content Include="Fixture\FixtureOut.aspx" />
+    <Content Include="Fixture\FixtureSearch.aspx" />
+    <Content Include="GridviewScroll.css" />
+    <Content Include="gridviewScroll.min.js" />
+    <Content Include="Images\arrowhl.png" />
+    <Content Include="Images\arrowhr.png" />
+    <Content Include="Images\arrowvb.png" />
+    <Content Include="Images\arrowvt.png" />
+    <Content Include="Images\image053.jpg" />
+    <Content Include="Images\Supplies\image_4.png" />
+    <Content Include="Images\Supplies\no_image.gif" />
+    <Content Include="Login.aspx" />
+    <Content Include="Main.aspx" />
+    <Content Include="Reference\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Reference\NPOI.dll" />
+    <Content Include="Reference\NPOI.OOXML.dll" />
+    <Content Include="Reference\NPOI.OOXML.XML" />
+    <Content Include="Reference\NPOI.OpenXml4Net.dll" />
+    <Content Include="Reference\NPOI.OpenXml4Net.XML" />
+    <Content Include="Reference\NPOI.OpenXmlFormats.dll" />
+    <Content Include="Reference\NPOI.XML" />
+    <Content Include="Scripts\images\loading.gif" />
+    <Content Include="Scripts\images\top.jpg" />
+    <Content Include="Scripts\images\topicon.gif" />
+    <Content Include="Scripts\indexdata.js" />
+    <Content Include="Scripts\jqtransformplugin\._jqtransform.css" />
+    <Content Include="Scripts\jqtransformplugin\._jquery.jqtransform.js" />
+    <Content Include="Scripts\jqtransformplugin\img\._btn_left.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\._btn_right.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\btn_left.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\btn_right.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\checkbox.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\._input_left-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\._input_left-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\._input_left.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\._input_right-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\._input_right-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\._input_right.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\._input_text_left.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\._input_text_right.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\input_left-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\input_left-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\input_left.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\input_right-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\input_right-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\input_right.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\input_text_left.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\input\input_text_right.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\radio.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\select_left.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\select_right.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\._textarea-mm-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\._textarea-mm-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\._textarea-mm.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\._textarea_bl.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\._textarea_bm.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\._textarea_br.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\._textarea_ml.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\._textarea_mr.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\._textarea_tl.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\._textarea_tm.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\._textarea_tr.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-bl-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-bl-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-bl.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-bm-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-bm-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-bm.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-br-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-br-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-br.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-ml-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-ml-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-ml.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-mm-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-mm-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-mm.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-mr-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-mr-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-mr.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-tl-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-tl-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-tl.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-tm-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-tm-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-tm.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-tr-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-tr-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\._textarea-tr.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-bl-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-bl-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-bl.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-bm-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-bm-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-bm.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-br-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-br-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-br.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-ml-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-ml-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-ml.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-mm-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-mm-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-mm.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-mr-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-mr-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-mr.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-tl-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-tl-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-tl.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-tm-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-tm-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-tm.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-tr-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-tr-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\notneeded\textarea-tr.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\textarea-mm-focus.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\textarea-mm-hover.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\textarea-mm.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\textarea_bl.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\textarea_bm.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\textarea_br.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\textarea_ml.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\textarea_mr.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\textarea_tl.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\textarea_tm.gif" />
+    <Content Include="Scripts\jqtransformplugin\img\textarea\textarea_tr.gif" />
+    <Content Include="Scripts\jqtransformplugin\jqtransform.css" />
+    <Content Include="Scripts\jqtransformplugin\jquery.jqtransform.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4\external\jquery\jquery.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\index.html" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.structure.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.structure.min.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.theme.min.css" />
+    <Content Include="Scripts\jquery-ui.css" />
+    <Content Include="Scripts\jquery-validation\jquery.metadata.js" />
+    <Content Include="Scripts\jquery-validation\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery-validation\messages_cn.js" />
+    <Content Include="Scripts\jquery-validation\version.txt" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery\jquery-1.5.2.min.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\ligerUI\js\core\base.js" />
+    <Content Include="Scripts\ligerUI\js\core\inject.js" />
+    <Content Include="Scripts\ligerUI\js\ligerui.all.js" />
+    <Content Include="Scripts\ligerUI\js\ligerui.min.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerAccordion.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerButton.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerCheckBox.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerCheckBoxList.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerComboBox.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerDateEditor.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerDialog.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerDrag.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerEasyTab.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerFilter.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerForm.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerGrid.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerLayout.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerListBox.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerMenu.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerMenuBar.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerMessageBox.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerPanel.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerPopupEdit.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerPortal.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerRadio.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerRadioList.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerResizable.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerSpinner.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerTab.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerTextBox.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerTip.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerToolBar.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerTree.js" />
+    <Content Include="Scripts\ligerUI\js\plugins\ligerWindow.js" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\css\ligerui-all.css" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\css\ligerui-common.css" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\css\ligerui-dialog.css" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\css\ligerui-form.css" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\css\ligerui-grid.css" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\css\ligerui-layout.css" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\css\ligerui-menu.css" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\css\ligerui-tab.css" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\css\ligerui-tree.css" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\common\bigloading.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\common\button-disabled.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\common\button-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\common\button.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\common\drop-icons.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\common\exclamation.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\common\invalid-line.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\common\loading.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\common\table.png" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\common\toggle.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\bg-panel-title-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\bg-panel-title-pressed.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\bg-panel-title.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\bg-tab-title-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\bg-tab-title-pressed.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\bg-tab-title.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\bg-text.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\bg-trigger-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\bg-trigger-pressed.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\bg-trigger.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\btn-l.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\btn-r.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\btn.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\button-bg-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\button-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\checkbox.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\dateeditor-bar-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\dateeditor-header-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\controls\radio.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\dateeditor\date.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\dateeditor\icon-first.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\dateeditor\icon-last.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\dateeditor\icon-next.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\dateeditor\icon-prev.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\form\verify-corner.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\grid\grid-checkbox-checked.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\grid\grid-checkbox.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\grid\grid-detail-close.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\grid\grid-detail-open.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\grid\grid-tree-close.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\grid\grid-tree-open.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\grid\header-bg-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\grid\header-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\grid\header2-bg.jpg" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\grid\popup-line.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\grid\popup-row-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\bar-button-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\checkbox-checked.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\checkbox.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\cross.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-close-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-close.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-down.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-drop.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-edited.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-first.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-last.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-line.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-load.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-next.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-prev.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-select.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-sort-asc.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-sort-desc.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-unselect.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\icon-up.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\icon\spr_icons.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\accordion-content.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\accordion-header-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\accordion-header.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\closeAll.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\layout-header-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\layout-header.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\layout-sidebar-header.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\mini-bottom.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\mini-left.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\mini-right.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\mini-top.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\panel-content.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\panel-header-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\panel-header.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\panel-header2.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\tabs-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\tabs-item-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\tabs-item-left-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\tabs-item-over-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\tabs-item-right-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\tabs-tools.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\layout\togglebar.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\menu\menu-item-arrow.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\menu\menu-item-down.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\menu\menu-item-over-l.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\menu\menu-item-over-m.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\menu\menu-item-over-r.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\menu\menu-line-x.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\menu\menu-line-y.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\panel\bar-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\panel\header-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\panel\header-bg.jpg" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\panel\header2-bg.jpg" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\panel\panel-btn-l.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\panel\panel-btn-r.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\panel\panel-btn.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\panel\panel-header.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\panel\panel-menu-item-down.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\panel\panel-menu.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\panel\panel-toolbar.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\panel\panel-tools.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\tree\folder-open.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\tree\folder.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\tree\loading.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\tree\nodeloading.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\tree\nodeloading2.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\tree\nodeloading3.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\tree\nodeloading4.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\tree\tree-leaf.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\tree\tree-level.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\tree\tree-noline.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\tree\tree-status-close.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\tree\tree-status-open.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\tree\tree-status.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\tree\tree.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\ui\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\ui\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\ui\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\ui\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\ui\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\ui\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\win\box-icons.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\win\box.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\win\dialog-bc.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\win\dialog-icons.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\win\dialog-tc.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\win\dialog-winbtns.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\win\dialog.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\win\dialogbtn.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\win\taskbar-task.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\win\taskbar.gif" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\win\taskbar.png" />
+    <Content Include="Scripts\ligerUI\skins\Aqua\images\win\taskicon.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\css\all.css" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\css\common.css" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\css\dialog.css" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\css\form.css" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\css\grid.css" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\css\layout.css" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\css\tab.css" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\bigloading.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\gridheader.png" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\layout\accordion-header.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\layout\icon-close-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\layout\icon-close.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\layout\layout-header.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\layout\tabs-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\layout\tabs-item-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\layout\tabs-item-left-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\layout\tabs-item-left-selected.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\layout\tabs-item-right-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\layout\tabs-item-right-selected.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\layout\tabs-item-selected.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\layout\tabswitch.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\layout\togglebar.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\tab_arrow_spr.png" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\tab_close.png" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\btn.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\button-disabled.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\button-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\button.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\button1.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\button2.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\date.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\dateeditor-bar.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\dateeditor-btn-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\dateeditor-btn.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\dateeditor-thead.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\grid-detail-close.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\grid-detail-open.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\gridalt.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\gridbar.jpg" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\grideditor.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\icon-down.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\icon-select.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\icon-select2.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\icon-unselect.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\icon-up.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\input.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\inputdisabled.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\loading.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\loading2.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\loading3.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\loading4.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\loadingl.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\panel-btn.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\spr_icons.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\ui\trigger.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\win\dialog-winbtns.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\win\dialogbtn.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray2014\images\win\dialogicon.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\css\all.css" />
+    <Content Include="Scripts\ligerUI\skins\Gray\css\common.css" />
+    <Content Include="Scripts\ligerUI\skins\Gray\css\dialog.css" />
+    <Content Include="Scripts\ligerUI\skins\Gray\css\form.css" />
+    <Content Include="Scripts\ligerUI\skins\Gray\css\grid.css" />
+    <Content Include="Scripts\ligerUI\skins\Gray\css\layout.css" />
+    <Content Include="Scripts\ligerUI\skins\Gray\css\tab.css" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\layout\accordion-header.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\layout\icon-close-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\layout\icon-close.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\layout\layout-header.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\layout\tabs-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\layout\tabs-item-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\layout\tabs-item-left-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\layout\tabs-item-left-selected.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\layout\tabs-item-right-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\layout\tabs-item-right-selected.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\layout\tabs-item-selected.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\layout\togglebar.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\btn.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\button-disabled.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\button-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\button.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\button1.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\button2.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\dateeditor-bar.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\dateeditor-btn-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\dateeditor-btn.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\dateeditor-thead.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\grid-detail-close.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\grid-detail-open.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\gridalt.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\gridbar.jpg" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\grideditor.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\icon-down.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\icon-select.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\icon-unselect.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\icon-up.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\input.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\inputdisabled.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\loading.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\loading2.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\loading3.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\loading4.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\ui\trigger.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\win\dialog-winbtns.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\win\dialogbtn.gif" />
+    <Content Include="Scripts\ligerUI\skins\Gray\images\win\dialogicon.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\add.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\archives.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\attibutes.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\back.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\bluebook.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\bookpen.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\busy.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\calendar.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\candle.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\coffee.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\comment.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\communication.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\config.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\customers.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\cut.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\database.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\delete.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\discuss.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\down.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\edit.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\graywarn.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\greenwarn.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\help.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\home.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\lock.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\logout.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\mailbox.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\memeber.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\modify.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\msn.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\myaccount.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\ok.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\outbox.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\pager.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\photograph.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\plus.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\prev.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\print.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\process.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\qq.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\refresh.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\right.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\role.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\save-disabled.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\save.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\search.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\search2.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\settings.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\true.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\up.gif" />
+    <Content Include="Scripts\ligerUI\skins\icons\view.gif" />
+    <Content Include="Scripts\ligerUI\skins\ligerui-icons.css" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\css\form.css" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\css\grid.css" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\css\layout.css" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\css\style.css" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\checkboxradio.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\icon-down-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\icon-down.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\icon-up-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\icon-up.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\invalid_line.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\text-date-icon.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\text-down-icon.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\text-focus.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\text-l-focus.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\text-l-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\text-l.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\text-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\text-r-focus.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\text-r-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\text-r.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\form\text.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\grid\gridheaderbg.jpg" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\layout\accordion-header-over.jpg" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\layout\accordion-header.jpg" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\layout\layout-header-over.jpg" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\layout\layout-header.jpg" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\layout\tabs-bg.jpg" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\layout\tabs-item-bg.jpg" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\layout\tabs-item-left-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\layout\tabs-item-over-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\layout\tabs-item-right-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Silvery\images\layout\tabs-tools.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\css\all.css" />
+    <Content Include="Scripts\ligerUI\skins\Tab\css\dialog.css" />
+    <Content Include="Scripts\ligerUI\skins\Tab\css\form.css" />
+    <Content Include="Scripts\ligerUI\skins\Tab\css\grid.css" />
+    <Content Include="Scripts\ligerUI\skins\Tab\css\tab.css" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\gridheader.png" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\layout\accordion-header.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\layout\icon-close-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\layout\icon-close.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\layout\layout-header.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\layout\tabs-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\layout\tabs-item-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\layout\tabs-item-left-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\layout\tabs-item-left-selected.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\layout\tabs-item-right-bg.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\layout\tabs-item-right-selected.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\layout\tabs-item-selected.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\layout\togglebar.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\tab_arrow_spr.png" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\tab_close.png" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\btn.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\button-disabled.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\button-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\button.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\button1.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\button2.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\date.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\dateeditor-bar.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\dateeditor-btn-over.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\dateeditor-btn.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\dateeditor-thead.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\grid-detail-close.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\grid-detail-open.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\gridalt.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\gridbar.jpg" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\grideditor.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\icon-down.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\icon-select.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\icon-select2.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\icon-unselect.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\icon-up.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\input.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\inputdisabled.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\loading.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\loading2.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\loading3.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\loading4.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\loadingl.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\spr_icons.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\ui\trigger.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\win\dialog-winbtns.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\win\dialogbtn.gif" />
+    <Content Include="Scripts\ligerUI\skins\Tab\images\win\dialogicon.gif" />
+    <Content Include="Scripts\syntaxhighlighter\scripts\shAutoloader.js" />
+    <Content Include="Scripts\syntaxhighlighter\scripts\shBrushBash.js" />
+    <Content Include="Scripts\syntaxhighlighter\scripts\shBrushCss.js" />
+    <Content Include="Scripts\syntaxhighlighter\scripts\shBrushJScript.js" />
+    <Content Include="Scripts\syntaxhighlighter\scripts\shBrushXml.js" />
+    <Content Include="Scripts\syntaxhighlighter\scripts\shCore.js" />
+    <Content Include="Scripts\syntaxhighlighter\styles\shCore.css" />
+    <Content Include="Scripts\syntaxhighlighter\styles\shCoreDefault.css" />
+    <Content Include="Styles\Form.css" />
+    <Content Include="Styles\Grid.css" />
+    <Content Include="Styles\Item.css" />
+    <Content Include="Styles\Login.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Supplies\Export.aspx" />
+    <Content Include="Supplies\GetSuppliesList.aspx" />
+    <Content Include="Supplies\GetSuppliesLog.aspx" />
+    <Content Include="Supplies\PICS.aspx" />
+    <Content Include="Supplies\SuppliesCheck.aspx" />
+    <Content Include="Supplies\SuppliesEdit.aspx" />
+    <Content Include="Supplies\SuppliesLimit.aspx" />
+    <Content Include="Supplies\SuppliesList.aspx" />
+    <Content Include="Supplies\SuppliesListValid.aspx" />
+    <Content Include="Supplies\SuppliesSearch.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebForm.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\ChangeLimitDate.ashx.cs">
+      <DependentUpon>ChangeLimitDate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\ChangeOther.ashx.cs">
+      <DependentUpon>ChangeOther.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\ChangeRemove.ashx.cs">
+      <DependentUpon>ChangeRemove.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\GetAjax.ashx.cs">
+      <DependentUpon>GetAjax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\SuppliesAdd.ashx.cs">
+      <DependentUpon>SuppliesAdd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\AssetsDataImport.aspx.cs">
+      <DependentUpon>AssetsDataImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\AssetsDataImport.aspx.designer.cs">
+      <DependentUpon>AssetsDataImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\AssetsDownload.aspx.cs">
+      <DependentUpon>AssetsDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\AssetsDownload.aspx.designer.cs">
+      <DependentUpon>AssetsDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\AssetsEdit.aspx.cs">
+      <DependentUpon>AssetsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\AssetsEdit.aspx.designer.cs">
+      <DependentUpon>AssetsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\AssetsGroupAdd.aspx.cs">
+      <DependentUpon>AssetsGroupAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\AssetsGroupAdd.aspx.designer.cs">
+      <DependentUpon>AssetsGroupAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\AssetsGroupChange.aspx.cs">
+      <DependentUpon>AssetsGroupChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\AssetsGroupChange.aspx.designer.cs">
+      <DependentUpon>AssetsGroupChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\AssetsList.aspx.cs">
+      <DependentUpon>AssetsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\AssetsList.aspx.designer.cs">
+      <DependentUpon>AssetsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\AssetsSearch.aspx.cs">
+      <DependentUpon>AssetsSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\AssetsSearch.aspx.designer.cs">
+      <DependentUpon>AssetsSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\AssetsUpload.aspx.cs">
+      <DependentUpon>AssetsUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\AssetsUpload.aspx.designer.cs">
+      <DependentUpon>AssetsUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\CalibrateLimit.aspx.cs">
+      <DependentUpon>CalibrateLimit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\CalibrateLimit.aspx.designer.cs">
+      <DependentUpon>CalibrateLimit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\CalibrateList.aspx.cs">
+      <DependentUpon>CalibrateList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\CalibrateList.aspx.designer.cs">
+      <DependentUpon>CalibrateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\CalibrateSearch.aspx.cs">
+      <DependentUpon>CalibrateSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\CalibrateSearch.aspx.designer.cs">
+      <DependentUpon>CalibrateSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\CalibrateEdit.aspx.cs">
+      <DependentUpon>CalibrateEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\CalibrateEdit.aspx.designer.cs">
+      <DependentUpon>CalibrateEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\CalibrateReturn.aspx.cs">
+      <DependentUpon>CalibrateReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\CalibrateReturn.aspx.designer.cs">
+      <DependentUpon>CalibrateReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\CalibrateTo.aspx.cs">
+      <DependentUpon>CalibrateTo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\CalibrateTo.aspx.designer.cs">
+      <DependentUpon>CalibrateTo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\ShieldingBoxCp.aspx.cs">
+      <DependentUpon>ShieldingBoxCp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\ShieldingBoxCp.aspx.designer.cs">
+      <DependentUpon>ShieldingBoxCp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\ShieldingBoxEdit.aspx.cs">
+      <DependentUpon>ShieldingBoxEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\ShieldingBoxEdit.aspx.designer.cs">
+      <DependentUpon>ShieldingBoxEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\ShieldingBoxLimit.aspx.cs">
+      <DependentUpon>ShieldingBoxLimit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\ShieldingBoxLimit.aspx.designer.cs">
+      <DependentUpon>ShieldingBoxLimit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\ShieldingBoxList.aspx.cs">
+      <DependentUpon>ShieldingBoxList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\ShieldingBoxList.aspx.designer.cs">
+      <DependentUpon>ShieldingBoxList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\ShieldingBoxSearch.aspx.cs">
+      <DependentUpon>ShieldingBoxSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\ShieldingBoxSearch.aspx.designer.cs">
+      <DependentUpon>ShieldingBoxSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\ObjExcel.cs" />
+    <Compile Include="Expendables\EditExpendables.aspx.cs">
+      <DependentUpon>EditExpendables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Expendables\EditExpendables.aspx.designer.cs">
+      <DependentUpon>EditExpendables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Expendables\ExpendablesList.aspx.cs">
+      <DependentUpon>ExpendablesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Expendables\ExpendablesList.aspx.designer.cs">
+      <DependentUpon>ExpendablesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Expendables\GetExpendables.aspx.cs">
+      <DependentUpon>GetExpendables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Expendables\GetExpendables.aspx.designer.cs">
+      <DependentUpon>GetExpendables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Expendables\GetExpendablesList.aspx.cs">
+      <DependentUpon>GetExpendablesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Expendables\GetExpendablesList.aspx.designer.cs">
+      <DependentUpon>GetExpendablesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fixture\FixtureEdit.aspx.cs">
+      <DependentUpon>FixtureEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fixture\FixtureEdit.aspx.designer.cs">
+      <DependentUpon>FixtureEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fixture\FixtureIn.aspx.cs">
+      <DependentUpon>FixtureIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fixture\FixtureIn.aspx.designer.cs">
+      <DependentUpon>FixtureIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fixture\FixtureLimit.aspx.cs">
+      <DependentUpon>FixtureLimit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fixture\FixtureLimit.aspx.designer.cs">
+      <DependentUpon>FixtureLimit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fixture\FixtureOutLimit.aspx.cs">
+      <DependentUpon>FixtureOutLimit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fixture\FixtureOutLimit.aspx.designer.cs">
+      <DependentUpon>FixtureOutLimit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fixture\FixtureList.aspx.cs">
+      <DependentUpon>FixtureList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fixture\FixtureList.aspx.designer.cs">
+      <DependentUpon>FixtureList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fixture\FixtureOut.aspx.cs">
+      <DependentUpon>FixtureOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fixture\FixtureOut.aspx.designer.cs">
+      <DependentUpon>FixtureOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fixture\FixtureSearch.aspx.cs">
+      <DependentUpon>FixtureSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fixture\FixtureSearch.aspx.designer.cs">
+      <DependentUpon>FixtureSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Global\ExcelOutport.cs" />
+    <Compile Include="Global\Global.cs" />
+    <Compile Include="Global\ServerJavascrpit.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchModel\Assets\Assets.cs" />
+    <Compile Include="SearchModel\Assets\AssetsGroup.cs" />
+    <Compile Include="SearchModel\Assets\v_Calibrate.cs" />
+    <Compile Include="SearchModel\Assets\v_ShieldingBox.cs" />
+    <Compile Include="SearchModel\Fixture\Fixture.cs" />
+    <Compile Include="SearchModel\Fixture\InFixture.cs" />
+    <Compile Include="SearchModel\Fixture\OutFixture.cs" />
+    <Compile Include="SearchModel\Supplies\Supplies.cs" />
+    <Compile Include="SearchModel\User.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Supplies\Export.aspx.cs">
+      <DependentUpon>Export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplies\Export.aspx.designer.cs">
+      <DependentUpon>Export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplies\GetSuppliesList.aspx.cs">
+      <DependentUpon>GetSuppliesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplies\GetSuppliesList.aspx.designer.cs">
+      <DependentUpon>GetSuppliesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplies\GetSuppliesLog.aspx.cs">
+      <DependentUpon>GetSuppliesLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplies\GetSuppliesLog.aspx.designer.cs">
+      <DependentUpon>GetSuppliesLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplies\PICS.aspx.cs">
+      <DependentUpon>PICS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplies\PICS.aspx.designer.cs">
+      <DependentUpon>PICS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplies\SuppliesCheck.aspx.cs">
+      <DependentUpon>SuppliesCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplies\SuppliesCheck.aspx.designer.cs">
+      <DependentUpon>SuppliesCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplies\SuppliesEdit.aspx.cs">
+      <DependentUpon>SuppliesEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplies\SuppliesEdit.aspx.designer.cs">
+      <DependentUpon>SuppliesEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplies\SuppliesLimit.aspx.cs">
+      <DependentUpon>SuppliesLimit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplies\SuppliesLimit.aspx.designer.cs">
+      <DependentUpon>SuppliesLimit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplies\SuppliesList.aspx.cs">
+      <DependentUpon>SuppliesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplies\SuppliesList.aspx.designer.cs">
+      <DependentUpon>SuppliesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplies\SuppliesListValid.aspx.cs">
+      <DependentUpon>SuppliesListValid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplies\SuppliesListValid.aspx.designer.cs">
+      <DependentUpon>SuppliesListValid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplies\SuppliesSearch.aspx.cs">
+      <DependentUpon>SuppliesSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplies\SuppliesSearch.aspx.designer.cs">
+      <DependentUpon>SuppliesSearch.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="UserControl\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\GetAjax.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\ChangeLimitDate.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\ChangeRemove.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\ChangeOther.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\SuppliesAdd.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38d7aa58-c95b-449b-86c6-a8073a56e11f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995dbb-9836-4647-ad22-865884fdeb9e}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>14771</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12918/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
